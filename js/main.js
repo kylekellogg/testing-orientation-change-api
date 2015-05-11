@@ -9,8 +9,8 @@ if ('orientation' in screen && 'angle' in screen.orientation) {
   };
   screen.orientation.addEventListener('change', onChangeHandler);
 } else {
-  onChangeHandler = function() {
-    orientationElem.textContent = 'Not supported';
+  onChangeHandler = function( e ) {
+    orientationElem.textContent = e.type || 'Not supported';
   };
 }
 
