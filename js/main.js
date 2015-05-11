@@ -28,7 +28,7 @@ function updateCounter() {
   var el = document.getElementById( 'counter' ),
       count = +el.textContent;
   
-  el.textContent = ''+(el + 1);
+  el.textContent = ''+(count + 1);
 }
 setInterval( updateCounter, 1000 );
 
