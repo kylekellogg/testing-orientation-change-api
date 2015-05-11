@@ -14,4 +14,6 @@ if ('orientation' in screen && 'angle' in screen.orientation) {
   };
 }
 
+window.addEventListener( 'orientationchange', onChangeHandler );
+
 onChangeHandler();
