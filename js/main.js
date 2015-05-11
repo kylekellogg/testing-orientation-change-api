@@ -5,11 +5,13 @@ var onChangeHandler;
 if ('orientation' in screen && 'angle' in screen.orientation) {
   // The browser supports the new version of the API
   onChangeHandler = function() {
-    orientationElem.textContent = screen.orientation.type;
+    orientationElem.textContent = screen.orientation.type || 'Blank?';
   };
   screen.orientation.addEventListener('change', onChangeHandler);
 } else {
-  onChangeHandler = function() {};
+  onChangeHandler = function() {
+    orientationElem.textContent = 'Not supported';
+  };
 }
 
 onChangeHandler();
