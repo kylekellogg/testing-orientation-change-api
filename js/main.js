@@ -24,4 +24,12 @@ if ('orientation' in screen && 'angle' in screen.orientation) {
 
 window.addEventListener( 'orientationchange', onChangeHandler );
 
+function updateCounter() {
+  var el = document.getElementById( 'counter' ),
+      count = +el.textContent;
+  
+  el.textContent = ''+(el + 1);
+}
+setInterval( updateCounter, 1000 );
+
 onChangeHandler();
