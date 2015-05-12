@@ -32,4 +32,8 @@ function updateCounter() {
 }
 setInterval( updateCounter, 1000 );
 
+window.addEventListener( 'resize', function( e ) {
+  document.getElementById('styleStats').textContent = document.getElementsByTagName('html')[0].getAttribute('style') || 'null';
+} );
+
 onChangeHandler();
